@@ -1,0 +1,21 @@
+/* miniprogram/pages/mine/mine.wxss */
+page{
+  background-color: #F0F0F0;
+}
+.t{
+  height: 100rpx;
+  background-color: white;
+  border-bottom: 2rpx solid #F0F0F0;
+}
+.t text{
+  margin-left: 20rpx;
+  line-height: 100rpx;
+  display: inline;
+}
+.t image{
+  float: right;
+  margin-top: 35rpx;
+  margin-right: 30rpx;
+  width: 35rpx;
+  height: 35rpx;
+}

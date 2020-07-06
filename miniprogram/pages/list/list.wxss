@@ -1,0 +1,107 @@
+/* miniprogram/pages/main/main.wxss */
+page{
+  height: 100%;
+}
+
+/*设置点击背景颜色*/
+.item{
+  height: 212rpx;
+  float: left;
+  /* margin-bottom: 10rpx; */
+}
+.item navigator{
+  height: 100%;
+}
+.navigator-hover{
+  background-color: rgba(202, 202, 202, 0.5);
+}
+/*标题*/
+.title{
+  /* margin-top: 10rpx; */
+  height: 40rpx;
+  margin-left: 20rpx;
+  float: left;
+  font-size:25rpx;
+  line-height: 40rpx;
+}
+/*稀有度*/
+.view-rare{
+  width: 100rpx;
+  float: left;
+  font-size:20rpx;
+}
+/*名称*/
+.view-title{
+  width: 590rpx;
+  float: left;
+  margin-left: 20rpx;
+
+}
+/*主要数据*/
+.view-box{
+  margin-left: 20rpx;
+  height: 170rpx;
+  float: left;
+}
+/*头像*/
+.thumbnail{
+  width :100rpx;
+  height : 150rpx;
+  float: left;
+}
+/*数据*/
+.view-msg{
+  width: 340rpx;
+  height: 150rpx;
+  float: left;
+  margin-left: 20rpx;
+  /* background-color: antiquewhite; */
+}
+/*行数据*/
+.msg-ele{
+  width: 340rpx;
+  height: 40rpx;
+  font-size: 25rpx;
+  line-height: 40rpx;
+  float: left;
+  /* background-color: aqua; */
+}
+.msg-ele-sub{
+  width: 170rpx;
+  height: 40rpx;
+  float: left;
+  /* background-color: gainsboro; */
+
+}
+/*属性图*/
+.view-msg-right{
+  height: 160rpx;
+  width: 240rpx;
+  float: left;
+  /* background-color: wheat; */
+}
+/* .view-msg-right canvas{
+  z-index: 1;
+} */
+.space{
+  border-bottom: solid rgb(216, 216, 216) 1rpx;
+}
+/*返回顶部*/
+.back{
+  position: fixed;
+  width:100rpx;
+  height: 100rpx;
+  bottom: 50rpx;
+  right: 20rpx;
+  /* z-index: 999; */
+}
+.back cover-image{
+  width:100rpx;
+  height:100rpx;
+  border-radius: 50rpx;
+  opacity: 0.5;
+}
+
+/* canvas{
+  background-color: #ffa7a7
+} */

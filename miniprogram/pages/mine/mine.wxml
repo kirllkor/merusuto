@@ -1,0 +1,9 @@
+<!--miniprogram/pages/mine/mine.wxml-->
+<view class='t' bindtap='update'>
+  <text>检查更新</text>
+  <image src="/images/right.png"></image>
+</view>
+<view class='t' bindtap='clean'>
+  <text>清空缓存</text>
+  <image src="/images/right.png"></image>
+</view>

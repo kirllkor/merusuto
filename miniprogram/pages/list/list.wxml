@@ -1,0 +1,45 @@
+<view>
+  <view wx:key="id" wx:for="{{array}}" class='item'>
+    <navigator url="/pages/show/show?index={{index}}">
+    <view class='title'>
+      <view class='view-rare'>
+        <text>{{item.rare}}</text>
+      </view>
+      <view class='view-title'>
+        <text>{{item.title}}</text>
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+
+    <view class='view-box'>
+      <image src="{{item.img}}" class='thumbnail'></image>
+      <view class='view-msg'>
+        <view class='msg-ele'>
+          <view class='msg-ele-sub'>{{item.life}}</view>
+          <view class='msg-ele-sub'>{{item.aspd}}</view>
+        </view>
+        <view class='msg-ele'>
+          <view class='msg-ele-sub'>{{item.atk}}</view>
+          <view class='msg-ele-sub'>{{item.tenacity}}</view>
+        </view>
+        <view class='msg-ele'>
+          <view class='msg-ele-sub'>{{item.aarea}}</view>
+          <view class='msg-ele-sub'>{{item.mspd}}</view>
+        </view>
+        <view class='msg-ele'>
+          <view class='msg-ele-sub'>{{item.anum}}</view>
+          <view class='msg-ele-sub' wx:if="{item.hits == null}">{{item.dps}}</view>
+        </view>
+      </view>
+      <view class='view-msg-right'>
+          <canvas canvas-id='{{item.canvas_id}}' style='width:160rpx ;height:160rpx;'></canvas>
+      </view>
+    </view>
+    </navigator> 
+    <view wx:if="{{spaceshow}}" class='space'></view>
+  </view>
+  <cover-view wx:if='{{backshow}}' class='back' bindtap='goTop'>
+    <cover-image src='cloud://merusuto-918274.6d65-merusuto-918274/icon/up-circle.png'></cover-image>
+  </cover-view>
+</view>
+

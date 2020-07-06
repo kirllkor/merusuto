@@ -1,0 +1,39 @@
+<!--miniprogram/pages/search/search.wxml-->
+<view>
+  <view class='level'>
+    <view class='title'>
+      <text>等级</text>
+    </view>
+    <view wx:key="index" wx:for="{{level}}"  class="{{item.select==true? 'sub-t' : 'sub-f'}}"
+    data-index="{{index}}" data-select="{{item.select}}" data-length="{{level.length}}"  bindtap='levelselect'>
+      <text>{{item.text}}</text>
+    </view>
+  </view>
+  <view class='order'>
+    <view class='title'>
+      <text>排序</text>
+    </view>
+    <view wx:key="index" wx:for="{{order}}"  class="{{item.select==true? 'sub-t' : 'sub-f'}}" 
+    data-index="{{index}}" data-select="{{item.select}}" data-length="{{order.length}}"  bindtap='orderselect'>
+      <text>{{item.text}}</text>
+    </view>
+  </view>
+  <view class='search'>
+    <view class='title'>
+      <text>筛选</text>
+    </view>
+    <view class='search-sub' style='height:{{item.height}}' wx:key="index" wx:for="{{search}}"
+    data-index="{{index}}" data-length="{{search[index].sub.length}}" bindtap='searchselect'>
+        <view class='search-sub-title'><text>{{item.text}}</text></view>
+        <view>
+          <view  wx:key="index" wx:for="{{item.sub}}" class="{{item.select==true? 'sub-t' : 'sub-f'}}"
+          data-index="{{index}}" bindtap='selectone'>
+          <text>{{item.text}}</text>
+          </view>  
+        </view>
+    </view>
+  </view>
+  <view class='view-btn'>
+    <button type='primary' class='btn' hover-class='btn-press' bindtap="search">确定</button>
+  </view>
+</view>

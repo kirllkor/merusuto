@@ -1,0 +1,89 @@
+<!--miniprogram/pages/show/show.wxml-->
+<view class='show-msg'>
+  <view class='show-pic'>
+    <image src='{{url}}'></image>
+  </view>
+  <view class='dark {{currentdark}}'></view>
+  <swiper vertical="true"  next-margin="80rpx" class='swiper' bindchange='change'> 
+    <swiper-item>
+ 
+    </swiper-item>
+    <swiper-item>
+      <view class='title'>
+        <text class='text-rare'>{{rare}}</text>
+        <text class='text-name'>{{title}}{{name}}</text>
+      </view>
+      <view class='icon'>
+        <view class='icon-img'>
+          <image src='{{icon}}'></image>
+        </view>
+        <view class='icon-right'>
+          
+            <button class="{{btn==true? 'tbtn' : 'fbtn'}}" catchtap='contrast'>
+              对比
+            </button>
+         
+          <view>
+            <text class='text-weapon'>武器:{{weapon}}</text>
+          </view>
+          <view>
+            <text class='text-id'>ID:{{id}}</text>
+          </view>   
+        </view>
+        
+      </view>
+      <view class='msg1'>
+        <view class='msg-line'>
+          <view class='msg-left'><text>初始生命:{{life}}</text></view><view class='msg-right'><text>攻速:{{aspd}}</text></view>
+        </view>
+        <view class='msg-line'>
+          <view class='msg-left'><text>满级生命:{{blife}}</text></view><view class='msg-right'><text>攻距:{{aarea}}</text></view>
+        </view>
+        <view class='msg-line'>
+          <view class='msg-left'><text>满觉生命:{{mlife}}</text></view><view class='msg-right'><text>攻数:{{anum}}</text></view>
+        </view>
+        <view class='msg-line'>
+          <view class='msg-left'><text>初始攻击:{{atk}}</text></view><view class='msg-right'><text>移速:{{mspd}}</text></view>
+        </view>
+        <view class='msg-line'>
+          <view class='msg-left'><text>满级攻击:{{batk}}</text></view><view class='msg-right'><text>韧性{{tenacity}}</text></view>
+        </view>
+        <view class='msg-line'>
+          <view class='msg-left'><text>满觉攻击:{{matk}}</text></view><view class='msg-right'><text>段数:{{hits}}</text></view>
+        </view>
+      </view>
+      <view class='msg2'>
+        <view class='msg-line'>
+          <view class='msg-left'><text>初始DPS:{{dps}}</text></view><view class='msg-right'><text>成长:{{type}}</text></view>
+        </view>
+        <view class='msg-line'>
+          <view class='msg-left'><text>满级DPS:{{bdps}}</text></view><view class='msg-right'><text>火补:{{fire}}</text></view>
+        </view>
+        <view class='msg-line'>
+          <view class='msg-left'><text>满觉DPS:{{mdps}}</text></view><view class='msg-right'><text>水补:{{aqua}}</text></view>
+        </view>
+        <view class='msg-line'>
+          <view class='msg-left'><text>初始总DPS:{{alldps}}</text></view><view class='msg-right'><text>风补:{{wind}}</text></view>
+        </view>
+        <view class='msg-line'>
+          <view class='msg-left'><text>满级总DPS:{{balldps}}</text></view><view class='msg-right'><text>光补:{{light}}</text></view>
+        </view>
+        <view class='msg-line'>
+          <view class='msg-left'><text>满觉总DPS:{{malldps}}</text></view><view class='msg-right'><text>暗补:{{dark}}</text></view>
+        </view>
+      </view>
+      <view class='msg3'>
+        <view class='msg-line'>
+          <view class='msg-left'><text>国家:{{country}}</text></view><view class='msg-right'><text>职业:{{career}}</text></view>
+        </view>      
+        <view class='msg-line'>
+          <view class='msg-left'><text>性别:{{gender}}</text></view><view class='msg-right'><text>性格:{{nature}}</text></view>
+        </view>
+         <view class='msg-line'>
+          <view class='msg-left'><text>年龄:{{age}}</text></view><view class='msg-right'><text>兴趣:{{interest}}</text></view>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+  
+</view>

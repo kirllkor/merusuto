@@ -1,0 +1,120 @@
+/* miniprogram/pages/show/show.wxss */
+page{
+  height: 100%;
+}
+
+.show-msg{
+  background-color: #dadada;
+  color: rgb(150, 146, 146);
+  font-size: 35rpx;
+  height: 100%;
+}
+.show-pic{
+  display: flex;
+  width: 750rpx;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.show-pic image{
+  width: 720rpx;
+  height: 810rpx;
+}
+.show-msg .swiper{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* margin-top: -100%; */
+}
+.icon{
+  height: 170rpx;
+}
+.icon-img{
+  float: left;
+  height: 170rpx;
+  width: 45%;
+  margin-left: 5%;
+}
+.icon-right{
+  float: left;
+  /* width: 45%; */
+  margin-top: 40rpx;
+}
+/* 未选择对比按钮 */
+.fbtn{
+  height: 40rpx;
+  line-height: 40rpx;
+  background-color: #dadada;
+}
+/* 选择对比按钮 */
+.tbtn{
+  height: 40rpx;
+  line-height: 40rpx;
+  background-color: #09bb07;
+  color: white;
+}
+/*头像*/
+.icon image{
+  width: 150rpx;
+  height: 150rpx;
+  margin-top: 20rpx;
+}
+
+.title{
+  margin-top: 20rpx;
+}
+.text-rare{
+  margin-left: 5%;
+}
+.text-name{
+  margin-left: 20rpx;
+}
+/*第一栏数据*/
+.msg1{
+  height: 240rpx;
+  margin-left: 5%;
+  margin-top: 20rpx;
+}
+/*第二栏数据*/
+.msg2{
+  height: 240rpx;
+  margin-left: 5%;
+  margin-top: 25rpx;
+}
+/*第三栏数据*/
+.msg3{
+  height: 120rpx;
+  margin-left: 5%;
+  margin-top: 25rpx;
+}
+.msg-line{
+  height: 30rpx;
+  font-size: 30rpx;
+  width: 750rpx;
+}
+.msg-left{
+  width: 45%;
+  float: left;
+}
+.msg-right{
+  width: 45%;
+  float: left;
+}
+
+/*黑影图层*/
+.dark{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+.dark0{
+  opacity: 0;
+  transition: 0.5s;
+}
+.dark1{
+  opacity: 0.8;
+  transition: 0.5s;
+}

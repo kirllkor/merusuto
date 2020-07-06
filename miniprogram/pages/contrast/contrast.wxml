@@ -1,0 +1,255 @@
+<!--miniprogram/pages/contrast/contrast.wxml-->
+
+<view class='con_msg'>
+  <view class='con_text'>
+    <view class='con_text_line'>
+      <view class='con_text_line_sub'>
+        <text>武器:{{con1_weapon}}</text>
+      </view>
+      <view class='con_text_line_sub'>
+        <text>武器:{{con2_weapon}}</text>
+      </view>
+    </view>
+    <view class='con_text_line'>
+      <view class='con_text_line_sub'>
+        <text>成长:{{con1_type}}</text>
+      </view>
+      <view class='con_text_line_sub'>
+        <text>成长:{{con2_type}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='con_canvas'>
+    <view class='con_canvas_title'><text>初始生命值</text></view>
+    <view class='con_canvas_sub'>
+      <view><text>1.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='life1'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con1_life}}</text></view>
+    </view>
+    <view class='con_canvas_sub'>
+      <view><text>2.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='life2'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con2_life}}</text></view>
+    </view>
+    <!-- ------------- -->
+    <view class='con_canvas_title'><text>满级生命值</text></view>
+    <view class='con_canvas_sub'>
+      <view><text>1.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='blife1'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con1_blife}}</text></view>
+    </view>
+    <view class='con_canvas_sub'>
+      <view><text>2.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='blife2'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con2_blife}}</text></view>
+    </view>
+    <!-- -------------------------- -->
+    <view class='con_canvas_title'><text>满觉生命值</text></view>
+    <view class='con_canvas_sub'>
+      <view><text>1.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='mlife1'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con1_mlife}}</text></view>
+    </view>
+    <view class='con_canvas_sub'>
+      <view><text>2.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='mlife2'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con2_mlife}}</text></view>
+    </view>
+    <!-- ------------------ -->
+    <view class='con_canvas_title'><text>初始攻击力</text></view>
+    <view class='con_canvas_sub'>
+      <view><text>1.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='atk1'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con1_atk}}</text></view>
+    </view>
+    <view class='con_canvas_sub'>
+      <view><text>2.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='atk2'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con2_atk}}</text></view>
+    </view>
+    <!-- --------------- -->
+    <view class='con_canvas_title'><text>满级攻击力</text></view>
+    <view class='con_canvas_sub'>
+      <view><text>1.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='batk1'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con1_batk}}</text></view>
+    </view>
+    <view class='con_canvas_sub'>
+      <view><text>2.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='batk2'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con2_batk}}</text></view>
+    </view>
+    <!-- ----------------- -->
+    <view class='con_canvas_title'><text>满觉攻击力</text></view>
+    <view class='con_canvas_sub'>
+      <view><text>1.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='matk1'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con1_matk}}</text></view>
+    </view>
+    <view class='con_canvas_sub'>
+      <view><text>2.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='matk2'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con2_matk}}</text></view>
+    </view>
+    <!-- ------------- -->
+    <view class='con_canvas_title'><text>初始单体DPS</text></view>
+    <view class='con_canvas_sub'>
+      <view><text>1.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='dps1'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con1_dps}}</text></view>
+    </view>
+    <view class='con_canvas_sub'>
+      <view><text>2.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='dps2'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con2_dps}}</text></view>
+    </view>
+    <!-- ---------------- -->
+    <view class='con_canvas_title'><text>满级单体DPS</text></view>
+    <view class='con_canvas_sub'>
+      <view><text>1.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='bdps1'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con1_bdps}}</text></view>
+    </view>
+    <view class='con_canvas_sub'>
+      <view><text>2.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='bdps2'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con2_bdps}}</text></view>
+    </view>
+    <!-- ---------------- -->
+    <view class='con_canvas_title'><text>满觉单体DPS</text></view>
+    <view class='con_canvas_sub'>
+      <view><text>1.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='mdps1'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con1_mdps}}</text></view>
+    </view>
+    <view class='con_canvas_sub'>
+      <view><text>2.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='mdps2'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con2_mdps}}</text></view>
+    </view>
+    <!-- ---------------- -->
+    <view class='con_canvas_title'><text>初始总体DPS</text></view>
+    <view class='con_canvas_sub'>
+      <view><text>1.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='alldps1'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con1_alldps}}</text></view>
+    </view>
+    <view class='con_canvas_sub'>
+      <view><text>2.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='alldps2'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con2_alldps}}</text></view>
+    </view>
+    <!-- ---------------- -->
+    <view class='con_canvas_title'><text>满级总体DPS</text></view>
+    <view class='con_canvas_sub'>
+      <view><text>1.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='balldps1'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con1_balldps}}</text></view>
+    </view>
+    <view class='con_canvas_sub'>
+      <view><text>2.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='balldps2'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con2_balldps}}</text></view>
+    </view>
+    <!-- ---------------- -->
+    <view class='con_canvas_title'><text>满觉总体DPS</text></view>
+    <view class='con_canvas_sub'>
+      <view><text>1.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='malldps1'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con1_malldps}}</text></view>
+    </view>
+    <view class='con_canvas_sub'>
+      <view><text>2.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='malldps2'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con2_malldps}}</text></view>
+    </view>
+    <!-- ---------------- -->
+     <view class='con_canvas_title'><text>攻击速度</text></view>
+    <view class='con_canvas_sub'>
+      <view><text>1.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='aspd1'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con1_aspd}}</text></view>
+    </view>
+    <view class='con_canvas_sub'>
+      <view><text>2.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='aspd2'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con2_aspd}}</text></view>
+    </view>
+    <!-- ---------------- -->
+    <view class='con_canvas_title'><text>攻击距离</text></view>
+    <view class='con_canvas_sub'>
+      <view><text>1.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='aarea1'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con1_aarea}}</text></view>
+    </view>
+    <view class='con_canvas_sub'>
+      <view><text>2.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='aarea2'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con2_aarea}}</text></view>
+    </view>
+    <!-- ---------------- -->
+    <view class='con_canvas_title'><text>攻击数量</text></view>
+    <view class='con_canvas_sub'>
+      <view><text>1.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='anum1'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con1_anum}}</text></view>
+    </view>
+    <view class='con_canvas_sub'>
+      <view><text>2.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='anum2'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con2_anum}}</text></view>
+    </view>
+    <!-- ---------------- -->
+    <view class='con_canvas_title'><text>移动速度</text></view>
+    <view class='con_canvas_sub'>
+      <view><text>1.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='mspd1'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con1_mspd}}</text></view>
+    </view>
+    <view class='con_canvas_sub'>
+      <view><text>2.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='mspd2'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con2_mspd}}</text></view>
+    </view>
+    <!-- ---------------- -->
+    <view class='con_canvas_title'><text>韧性</text></view>
+    <view class='con_canvas_sub'>
+      <view><text>1.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='tenacity1'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con1_tenacity}}</text></view>
+    </view>
+    <view class='con_canvas_sub'>
+      <view><text>2.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='tenacity2'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con2_tenacity}}</text></view>
+    </view>
+    <!-- ---------------- -->
+    <view class='con_canvas_title'><text>攻击段数</text></view>
+    <view class='con_canvas_sub'>
+      <view><text>1.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='hits1'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con1_hits}}</text></view>
+    </view>
+    <view class='con_canvas_sub'>
+      <view><text>2.</text></view>
+      <view class='con_canvas_sub_canvas'><canvas canvas-id='hits2'></canvas></view>
+      <view class='con_canvas_sub_text'><text>{{con2_hits}}</text></view>
+    </view>
+    <!-- ---------------- -->
+  </view>
+</view>
+
+<cover-view class='top'>
+  <cover-view class='con_icon'>
+  <cover-image wx:if='{{con1_icon}}' src='{{con1_icon}}'></cover-image>
+  <cover-view class='con_name'>1.{{con1_name}}</cover-view>
+  </cover-view>
+
+  <cover-view class='con_icon'>
+  <cover-image wx:if='{{con2_icon}}' src='{{con2_icon}}'></cover-image>
+  <cover-view class='con_name'>2.{{con2_name}}</cover-view>
+  </cover-view>
+</cover-view>
+
+
+
